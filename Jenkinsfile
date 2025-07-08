@@ -1,13 +1,12 @@
 pipeline{
-    agent any 
+    agent {
+        label 'java'
+    }
     stages{
-        stage('Build'){
+        stage('Build')
+        {
             steps{
-                echo "perform this stage untill success"
-                retry(3){
-                echo "This is not correct way"
-                error "continue this stage"
-                }
+                echo "print aboove stage"
             }
         }
     }
