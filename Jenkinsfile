@@ -1,12 +1,10 @@
 pipeline{
-    agent {
-        label 'java'
-    }
+    agent any 
     stages{
-        stage('Build')
-        {
+        stage ('Build'){
             steps{
-                echo "print aboove stage"
+                echo "This is first job created"
+                sh "hostname -i"
             }
         }
     }
